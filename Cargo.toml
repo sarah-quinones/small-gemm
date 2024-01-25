@@ -1,0 +1,25 @@
+[package]
+name = "small-gemm"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+pulp = { version = "0.18.6", features = ["nightly"] }
+reborrow = "0.5.5"
+seq-macro = "0.3.5"
+
+[dev-dependencies]
+criterion = "0.5.1"
+faer = "0.16.0"
+faer-core = "0.16.0"
+nalgebra = "0.32.3"
+num-complex = "0.4.4"
+openblas-src = { version = "*", features = ["system"] }
+ndarray = { version = "*", features = ["blas"] }
+rand = "0.8.5"
+
+[[bench]]
+name = "bench"
+harness = false
